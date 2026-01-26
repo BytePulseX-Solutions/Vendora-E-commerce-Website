@@ -70,6 +70,7 @@ Vendora - E-commerce Website/
 │   ├── css/
 │   │   ├── style.css
 │   │   ├── pages-styles.css
+│   │   ├── pages-responsive-styles.css
 │   │   └── animations.css
 │   │
 │   ├── js/
@@ -79,6 +80,8 @@ Vendora - E-commerce Website/
 │   │   ├── header/
 │   │   ├── hero/
 │   │   ├── brands/
+│   │   ├── icons/
+│   │   ├── og-preview/
 │   │   └── logo/
 │
 └── README.md---
