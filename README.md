@@ -1,17 +1,17 @@
 # Vendora – E-commerce Website
 
 Vendora is a full-scale, multi-page e-commerce website developed and owned by **BytePulseX Solutions**.  
-The project is built as a commercial-grade frontend solution intended for **client delivery, resale, and portfolio demonstration**.
+The project is built as a commercial-grade **static frontend solution** intended for **client delivery, resale, and portfolio demonstration**.
 
-This repository represents a production-ready e-commerce interface designed for real businesses, not a demo or educational prototype.
+This repository represents a production-ready e-commerce interface designed for real businesses, not a demo or academic prototype.
 
 ---
 
 ## Project Overview
 
-Vendora covers the complete lifecycle of an online store, including product browsing, user authentication, cart and wishlist management, checkout flow, order tracking, and user dashboard functionality.
+Vendora covers the complete frontend lifecycle of an online store, including product browsing layouts, user authentication interfaces, cart and wishlist UI, checkout flow screens, order tracking pages, and a user dashboard layout.
 
-The project is intentionally structured as a large, scalable application suitable for customization, white-labeling, and deployment for multiple clients.
+All product listings, categories, and content are **static and frontend-based**, making this project ideal as a ready-to-use UI foundation for backend or API integration.
 
 ---
 
@@ -36,7 +36,7 @@ The project is intentionally structured as a large, scalable application suitabl
 17. Terms & Conditions  
 18. Refund & Return Policy  
 
-Each page follows a consistent design system while supporting page-specific logic and interactions.
+Each page follows a consistent design system while supporting page-specific layouts and interactions.
 
 ---
 
@@ -87,19 +87,21 @@ Vendora - E-commerce Website/
 └── README.md---
 ```
 
+---
+
 ## Key Features
 
-- Dynamic product listings and category-based browsing  
-- Interactive product detail pages  
-- Cart and wishlist management  
-- User authentication interfaces (Register / Login)  
-- Checkout flow with order summary  
-- Order confirmation and order tracking pages  
+- Static product listing and category browsing layouts  
+- Product detail page UI  
+- Cart and wishlist interface design  
+- User authentication screens (Register / Login)  
+- Checkout and order summary UI  
+- Order confirmation and order tracking layouts  
 - User dashboard layout  
-- Responsive design for multiple screen sizes  
-- Extensive JavaScript-based UI interactions  
+- Fully responsive design across devices  
+- JavaScript-based UI interactions and behaviors  
 
-The application contains multiple interactive behaviors across nearly every page, reflecting a real commercial storefront structure.
+This project focuses on delivering a complete **frontend user experience** for an e-commerce platform.
 
 ---
 
@@ -110,32 +112,64 @@ The application contains multiple interactive behaviors across nearly every page
 - Bootstrap  
 - JavaScript (Vanilla JS)  
 
-The project is built in a way that allows smooth transition to backend services, APIs, or modern JavaScript frameworks if required.
+The codebase is structured to allow seamless future integration with backend services, APIs, or modern JavaScript frameworks.
 
 ---
 
-## Project Purpose
+## Installation & Usage
 
-Vendora was created to:
+1. Download and extract the project files.
+2. Open any `.html` file directly in your browser (start with `home.html`).
+3. No build tools or dependencies are required.
+4. Customize content, styles, and scripts as needed for client or portfolio use.
 
-- Demonstrate a complete e-commerce website structure  
-- Practice scalable frontend architecture  
-- Implement real shopping and order workflows  
-- Serve as a foundation for backend or payment system integration  
-
----
-
-## Project Status
-
-This project is actively structured and ready for future enhancements such as:
-
-- Backend integration  
-- Database connectivity  
-- Payment gateway implementation  
-- Admin and inventory management  
+This is a **static frontend project** and does not require a server to run.
 
 ---
 
-## License
+## Customization & Extension
 
-This project is for educational and demonstration purposes.
+Vendora can be extended with:
+
+- Backend frameworks (Node.js, Laravel, Django, etc.)
+- REST or GraphQL APIs
+- Payment gateway integration
+- Authentication systems
+- Admin dashboards and inventory management
+
+---
+
+## Intended Use
+
+Vendora is suitable for:
+
+- Freelancers delivering client projects  
+- Agencies offering white-label e-commerce solutions  
+- Portfolio and sample work  
+- Startup MVP UI foundations  
+- Frontend bases for full-stack e-commerce platforms  
+
+---
+
+## Ownership & License
+
+This project is a commercial asset developed and owned by **BytePulseX Solutions**.
+
+You are allowed to:
+- Use it for client projects
+- Customize and rebrand it
+- Deploy it as part of a larger system
+
+You are not allowed to:
+- Resell or redistribute the source files as-is
+- Claim authorship of the original design and structure
+
+© BytePulseX Solutions. All rights reserved.
+
+---
+
+## Support
+
+For customization, licensing inquiries, or extended development support, contact:
+
+**BytePulseX Solutions**
