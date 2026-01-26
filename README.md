@@ -168,6 +168,12 @@ You are not allowed to:
 
 ---
 
+## Image Credits
+
+Images used in this project are sourced from [Unsplash](https://unsplash.com/) and are free for commercial use. No attribution is required, but we acknowledge and thank the creators for their work.
+
+---
+
 ## Support
 
 For customization, licensing inquiries, or extended development support, contact:
