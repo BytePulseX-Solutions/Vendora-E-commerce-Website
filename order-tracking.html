@@ -1,0 +1,687 @@
+<!-------------------------------------------------------------------------
+ Project: Vendora - E-commerce Website
+ File: order-tracking.html
+ Description: This file defines the structure and layout of the Order Tracking Page.
+ Author: BytePulseX Solutions
+ Created: 01/01/2026
+ Last Updated: 02/01/2026
+-------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ===================== META TAGS ===================== -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <meta name="description"
+    content="Track your orders with Vendora and receive real-time updates on shipping status, delivery progress, and expected arrival times." />
+  <meta name="theme-color" content="#28a745" />
+
+  <!-- ===================== PAGE TITLE ===================== -->
+  <title>Order Tracking – Track Your Orders | Vendora</title>
+
+  <!-- ===================== FAVICON & APP ICONS ===================== -->
+  <link rel="shortcut icon" href="assets/img/icons/favicon.ico" />
+  <link rel="icon" type="image/png" href="assets/img/icons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/icons/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Vendora" />
+  <link rel="manifest" href="assets/img/icons/site.webmanifest" />
+
+  <!-- ===================== SOCIAL SHARING META (OPEN GRAPH & TWITTER) ===================== -->
+  <meta property="og:title" content="Order Tracking – Track Your Orders | Vendora" />
+  <meta property="og:description"
+    content="Track your orders with Vendora and receive real-time updates on shipping status, delivery progress, and expected arrival times." />
+  <meta property="og:image" content="assets/img/og-preview/og-image.jpg" />
+  <meta property="og:url" content="https://vendora-market.netlify.app/order-tracking" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- ===================== PERFORMANCE OPTIMIZATION ===================== -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+  <!-- ===================== BOOTSTRAP CSS ===================== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- ===================== ICONS ===================== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- ===================== CUSTOM STYLES ===================== -->
+  <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="assets/css/pages-styles.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="assets/css/pages-responsive-styles.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="assets/css/animations.css" type="text/css" media="all" />
+
+</head>
+
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="header fixed-top">
+    <!-- ================= TOP BAR================= -->
+    <div class="top-bar bg-primary-green text-white py-2 small">
+      <div class="container d-flex justify-content-between align-items-center gap-5 ps-lg-2 pe-lg-2 ps-2 pe-0">
+
+        <!-- Left: Offers / Delivery -->
+        <div class="align-items-center gap-3">
+          <span class="me-3">
+            <i class="fa-solid fa-truck-fast me-1"></i>
+            Fast Shipping
+          </span>
+          <br class="d-block d-sm-none">
+          <span>
+            <i class="fa-solid fa-rotate me-1 mt-3"></i>
+            7-Day Returns
+          </span>
+        </div>
+
+        <!-- Right: Utility Links -->
+        <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap">
+          <a href="order-tracking.html" class="text-white text-decoration-none">
+            <i class="fa-solid fa-location-dot me-1"></i> Track Order
+          </a>
+          <a href="contact.html" class="text-white text-decoration-none">
+            <i class="fa-solid fa-headset me-1"></i> Help
+          </a>
+          <a href="login.html" class="text-white text-decoration-none fw-semibold">
+            <i class="fa-solid fa-user me-1"></i> Sign In
+          </a>
+        </div>
+
+      </div>
+    </div>
+    <!-- ================= MAIN NAVBAR ================= -->
+    <nav class="navbar navbar-expand-lg bg-secondary-green navbar-dark">
+      <div class="container d-flex align-items-center justify-content-between">
+
+        <!-- Left: Hamburger + Logo -->
+        <div class="d-flex align-items-center">
+          <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand logo" href="home.html">
+            <img src="assets/img/logo/logo.png" height="45" alt="Vendora">
+          </a>
+        </div>
+
+        <!-- Desktop Search -->
+        <form class="d-none d-lg-flex mx-lg-4 flex-grow-1">
+          <div class="input-group">
+            <input class="form-control" type="search" placeholder="Search for products, brands and more">
+            <button class="btn btn-accent" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </form>
+
+        <!-- Right Icons -->
+        <div class="d-flex align-items-center">
+
+          <!-- Desktop Links -->
+          <ul class="navbar-nav ms-auto align-items-center d-none d-lg-flex">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">
+                <i class="fa-solid fa-house me-1"></i> Home
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">
+                <i class="fa-solid fa-store me-1"></i> Shop
+              </a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                <i class="fa-solid fa-layer-group me-1"></i> Categories
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a class="dropdown-item" href="electronics.html">
+                    <i class="fa-solid fa-plug me-1"></i> Electronics
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">
+                <i class="fa-solid fa-circle-info me-1"></i> About
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">
+                <i class="fa-solid fa-envelope me-1"></i> Contact
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">
+                <i class="fa-solid fa-user-circle me-1"></i> My Account
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="wishlist.html">
+                <i class="fa-regular fa-heart me-1"></i> Wishlist
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="cart.html">
+                <i class="fa-solid fa-cart-shopping me-1"></i> Cart
+                <span class="badge bg-danger rounded-pill position-absolute top-0 start-100 translate-middle">2</span>
+              </a>
+            </li>
+          </ul>
+
+          <!-- Mobile Icons -->
+          <div class="d-flex d-lg-none gap-3">
+            <a href="dashboard.html" class="text-white"><i class="fa-regular fa-user fs-5"></i></a>
+            <a href="wishlist.html" class="text-white"><i class="fa-regular fa-heart fs-5"></i></a>
+            <a href="cart.html" class="text-white position-relative">
+              <i class="fa-solid fa-cart-shopping fs-5"></i>
+              <span class="badge bg-danger rounded-pill position-absolute top-0 start-100 translate-middle">2</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= SIDEBAR / OFFCANVAS================= -->
+  <sidebar class="offcanvas offcanvas-start bg-secondary-green text-white" tabindex="-1" id="mobileSidebar">
+    <div class="offcanvas-header border-bottom">
+      <a class="navbar-brand logo" href="home.html">
+        <img src="assets/img/logo/logo.png" height="45" alt="Vendora">
+      </a>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+
+    <div class="offcanvas-body">
+
+      <!-- Search -->
+      <form class="mb-4">
+        <div class="input-group">
+          <input class="form-control" type="search" placeholder="Search products">
+          <button class="btn btn-accent"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+      </form>
+
+      <!-- Navigation Links -->
+      <ul class="navbar-nav gap-2">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="home.html">
+            <i class="fa-solid fa-house me-2"></i> Home
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-white" href="shop.html">
+            <i class="fa-solid fa-store me-2"></i> Shop
+          </a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+            <i class="fa-solid fa-layer-group me-2"></i> Categories
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li>
+              <a class="dropdown-item" href="electronics.html">
+                <i class="fa-solid fa-plug me-2"></i> Electronics
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-white" href="about.html">
+            <i class="fa-solid fa-circle-info me-2"></i> About
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-white" href="contact.html">
+            <i class="fa-solid fa-envelope me-2"></i> Contact
+          </a>
+        </li>
+      </ul>
+
+      <div class="mt-4">
+        <a href="shop.html" class="btn btn-accent w-100">Start Shopping</a>
+      </div>
+
+    </div>
+  </sidebar>
+
+  <!-- ===================== ORDER TRACKING HERO ===================== -->
+  <section class="hero py-5 bg-primary-green text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <small class="text-accent-green fw-semibold">Track Your Order</small>
+          <h1 class="mt-2">Order Tracking</h1>
+          <p class="mt-2 text-light">
+            Check the status of your orders and stay updated in real-time.
+          </p>
+        </div>
+        <nav class="d-flex justify-content-center mt-3" aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+              <a href="home.html" class="text-light text-decoration-none">Home</a>
+            </li>
+            <li class="breadcrumb-item active text-accent-green">
+              Order Tracking
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ORDER SEARCH ===================== -->
+  <section class="order-search py-4 border-bottom">
+    <div class="container">
+      <!-- ===== SECTION HEADER ROW ===== -->
+      <div class="row mb-4">
+        <div class="col-md-12 text-center">
+          <small class="d-block text-accent-green text-uppercase fw-semibold mb-1">
+            Order Status
+          </small>
+          <h2 class="fw-bold mb-2">Delivery Progress</h2>
+
+          <p class="text-muted mb-0">
+            View the current stage of your order with real-time progress from order placement to delivery.
+          </p>
+        </div>
+      </div>
+      <div class="row align-items-end">
+        <div class="col-md-8">
+          <label class="form-label">Order ID</label>
+          <input type="text" class="form-control" placeholder="Enter your order number">
+        </div>
+        <div class="col-md-4">
+          <a href="#order-timeline" class="btn btn-accent w-100 mt-3 mt-md-0">Track Order</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ORDER SUMMARY ===================== -->
+  <section class="order-summary py-5 bg-light">
+    <div class="container">
+      <!-- ===== SECTION HEADER ROW ===== -->
+      <div class="row mb-3">
+        <div class="col-md-12 text-center">
+          <small class="d-block text-accent-green text-uppercase fw-semibold mb-1">
+            Order Overview
+          </small>
+          <h2 class="fw-bold mb-2">Your Order Details</h2>
+          <p class="text-muted mb-0">
+            Review your order status, payment, and shipment information.
+          </p>
+        </div>
+      </div>
+
+      <!-- Main Order Card -->
+      <div class="row justify-content-center">
+        <div class="col-md-12 p-3 border rounded-3 bg-white shadow-sm">
+          <h5 class="fw-semibold mb-3 text-md-start">Order Summary</h5>
+
+          <div class="d-flex flex-column gap-2">
+            <div class="d-flex justify-content-between">
+              <span class="text-md-start me-auto"><strong>Order #:</strong></span>
+              <span class="ms-auto text-md-start"><strong>458796</strong></span>
+            </div>
+            <hr />
+
+            <div class="d-flex justify-content-between">
+              <span class="text-md-start me-auto"><strong>Placed On:</strong></span>
+              <span class="ms-auto text-md-start"> <strong>12 Sep 2026</strong></span>
+            </div>
+            <hr />
+
+            <div class="d-flex justify-content-between">
+              <span class="text-md-start me-auto"><strong>Total:</strong> </span>
+              <span class="ms-auto text-md-start">
+                <strong>$249.00</strong>
+              </span>
+            </div>
+            <hr />
+
+            <div class="d-flex justify-content-between align-items-center ">
+              <span class="me-auto badge bg-success px-2 py-2 fs-6">In Transit</span>
+              <small class="ms-auto text-md-end text-muted">Expected Delivery: 16 Sep 2026</small>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- ===================== ORDER TIMELINE ===================== -->
+  <section class="order-timeline py-5 bg-light" id="order-timeline">
+    <div class="container">
+      <!-- ===== SECTION HEADER ROW ===== -->
+      <div class="row mb-3">
+        <div class="col-md-12">
+          <small class="d-block text-center text-accent-green text-uppercase fw-semibold mb-1">
+            Track Your Order
+          </small>
+          <h2 class="fw-bold text-center mb-2">Order Timeline</h2>
+          <p class="text-center text-muted">
+            Stay updated with every step of your order, from placement to delivery.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+
+          <div class="tracking-wrapper">
+
+            <!-- Step 1 -->
+            <div class="tracking-step completed">
+              <div class="tracking-icon">
+                <i class="fa-solid fa-receipt"></i>
+              </div>
+              <div class="tracking-content">
+                <h6>Order Placed</h6>
+                <small>12 Sep 2025</small>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="tracking-step completed">
+              <div class="tracking-icon">
+                <i class="fa-solid fa-box"></i>
+              </div>
+              <div class="tracking-content">
+                <h6>Processing</h6>
+                <small>13 Sep 2025</small>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="tracking-step active">
+              <div class="tracking-icon">
+                <i class="fa-solid fa-truck"></i>
+              </div>
+              <div class="tracking-content">
+                <h6>Shipped</h6>
+                <small>14 Sep 2025</small>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="tracking-step">
+              <div class="tracking-icon">
+                <i class="fa-solid fa-house"></i>
+              </div>
+              <div class="tracking-content">
+                <h6>Delivered</h6>
+                <small>Pending</small>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SHIPPING DETAILS ===================== -->
+  <section class="shipping-details py-5 bg-light">
+    <div class="container">
+      <!-- ===== SECTION HEADER ROW ===== -->
+      <div class="row mb-3">
+        <div class="col-md-12 text-center">
+          <small class="d-block text-accent-green text-uppercase fw-semibold mb-1">
+            Delivery Information
+          </small>
+          <h2 class="fw-bold mb-2">Shipping & Courier Details</h2>
+          <p class="text-muted mb-0">
+            All the information you need regarding the delivery and courier of your order.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card/Table Style -->
+      <div class="row justify-content-center">
+        <div class="col-md-12 p-3 rounded-3 border bg-white shadow-sm">
+
+          <!-- Shipping Address -->
+          <div class="shipping-address-table">
+            <h5 class="mb-3">Shipping Address</h5>
+            <table class="table table-border mb-0">
+              <tbody>
+                <tr>
+                  <td class="me-auto fw-semibold">Recipient</td>
+                  <td class="text-end ms-auto">John Doe</td>
+                </tr>
+                <tr>
+                  <td class="me-auto fw-semibold">Street</td>
+                  <td class="text-end ms-auto">123 Main Street</td>
+                </tr>
+                <tr>
+                  <td class="me-auto fw-semibold">City/ZIP</td>
+                  <td class="text-end ms-auto">New York, NY 10001</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Courier Information -->
+          <div class="courier-info-table mt-4">
+            <h5 class="mb-3">Courier Information</h5>
+            <table class="table table-border mb-0">
+              <tbody>
+                <tr>
+                  <td class="me-auto fw-semibold">Carrier</td>
+                  <td class="ms-auto text-end">FedEx</td>
+                </tr>
+                <tr>
+                  <td class="me-auto fw-semibold">Tracking #</td>
+                  <td class="ms-auto text-end">FX458963214</td>
+                </tr>
+                <tr>
+                  <td class="me-auto fw-semibold">Estimated Delivery</td>
+                  <td class="ms-auto text-end">16 Sep 2026</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ORDER ITEMS ===================== -->
+  <section class="order-items py-5 bg-light">
+    <div class="container">
+      <!-- ===== SECTION HEADER ROW ===== -->
+      <div class="row mb-3">
+        <div class="col-md-12 text-center">
+          <small class="d-block text-accent-green text-uppercase fw-semibold mb-1">
+            Order Breakdown
+          </small>
+          <h2 class="fw-bold mb-2">Items in Your Order</h2>
+          <p class="text-muted mb-0">
+            Below is a list of products included in this order along with their quantities and prices.
+          </p>
+        </div>
+      </div>
+      <div class="row align-items-center border-bottom py-4">
+
+        <!-- Product Image -->
+        <div class="col-md-2 col-4">
+          <img src="https://images.unsplash.com/photo-1644874286981-c21d8f43e2f2?q=80&w=735&auto=format&fit=crop"
+            class="img-fluid rounded shadow-sm" alt="Wireless Headphones">
+        </div>
+
+        <!-- Product Info -->
+        <div class="col-md-6 col-8">
+          <p class="mb-1 fw-semibold">
+            Wireless Headphones
+          </p>
+          <p class="text-muted small mb-1">
+            Color: Black · SKU: WH-204
+          </p>
+          <span class="badge bg-success-subtle text-success small">
+            In Stock
+          </span>
+        </div>
+
+        <!-- Price -->
+        <div class="col-md-4 col-12 text-md-end mt-3 mt-md-0">
+          <p class="mb-1 text-muted small">
+            Quantity: 1
+          </p>
+          <strong class="fs-6">$129.00</strong>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== ORDER SUPPORT ===================== -->
+  <section class="order-support bg-primary-green py-5">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <!-- Text Content -->
+        <div class="col-md-8 text-center text-md-start text-white">
+          <small class="text-uppercase text-accent-green fw-semibold d-block mb-1">
+            Order Assistance
+          </small>
+          <h3 class="fw-semibold mb-2">
+            Need Help with Your Order?
+          </h3>
+          <p class="mb-0 text-white-50">
+            Get support for tracking, delivery issues, returns, or payment questions.
+          </p>
+        </div>
+
+        <!-- CTA -->
+        <div class="col-md-4 d-flex justify-content-center justify-content-md-end mt-3 mt-md-0">
+          <a href="contact.html" class="btn btn-outline-green px-4 fw-semibold">
+            Contact Support
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ORDER CTA ===================== -->
+  <section class="order-cta py-5 bg-secondary-green text-white">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+
+          <small class="d-block text-uppercase text-accent-green fw-semibold mb-1">
+            Order Complete
+          </small>
+
+          <h3 class="fw-bold mb-3">
+            Thank you for shopping with us
+          </h3>
+          <p class="mb-4">
+            Your order has been successfully placed and is being processed.
+            You can continue shopping or track your order anytime from your account.
+          </p>
+
+          <a href="shop.html" class="btn btn-accent px-4 fw-semibold">
+            Continue Shopping
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer py-5 pb-0 bg-primary-green text-white">
+    <div class="container">
+      <div class="row gy-4">
+
+        <!-- Logo & About -->
+        <div class="col-md-3">
+          <a class="navbar-brand" href="home.html">
+            <img src="assets/img/logo/logo.png" height="45" alt="Vendora">
+          </a>
+          <p class="mt-2">
+            Fast shipping, secure payments, and reliable support with <strong>Vendora</strong>.
+          </p>
+        </div>
+
+        <!-- Shop & Account -->
+        <div class="col-md-3">
+          <h5 class="mb-3">Shop & Account</h5>
+          <ul class="list-unstyled">
+            <li><a href="shop.html" class="text-white text-decoration-none">Shop</a></li>
+            <li><a href="wishlist.html" class="text-white text-decoration-none">Wishlist</a></li>
+            <li><a href="cart.html" class="text-white text-decoration-none">Cart</a></li>
+            <li><a href="checkout.html" class="text-white text-decoration-none">Checkout</a></li>
+            <li><a href="dashboard.html" class="text-white text-decoration-none">My Account</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Service -->
+        <div class="col-md-3">
+          <h5 class="mb-3">Customer Service</h5>
+          <ul class="list-unstyled">
+            <li><a href="order-tracking.html" class="text-white text-decoration-none">Track Order</a></li>
+            <li><a href="refund-return-policy.html" class="text-white text-decoration-none">Refund & Returns</a></li>
+            <li><a href="faqs.html" class="text-white text-decoration-none">FAQs</a></li>
+            <li><a href="contact.html" class="text-white text-decoration-none">Help & Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Company & Legal -->
+        <div class="col-md-3">
+          <h5 class="mb-3">Company & Legal</h5>
+          <ul class="list-unstyled">
+            <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+            <li><a href="privacy-policy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
+            <li><a href="terms-conditions.html" class="text-white text-decoration-none">Terms & Conditions</a></li>
+            <li><a href="login.html" class="text-white text-decoration-none">Login</a></li>
+            <li><a href="register.html" class="text-white text-decoration-none">Register</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="bg-secondary-green border-top mt-4 text-center px-3 py-2">
+      <p class="text-white mb-0">
+        © <span id="year"></span> Vendora. Powered by BytePulseX Solutions.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+
+  </script>
+
+
+  <!-- ================= BOOTSTRAP JS ================= -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ================= CUSTOM JS FILE ================= -->
+  <script src="assets/js/script.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,822 @@
+<!-------------------------------------------------------------------------
+ Project: Vendora - E-commerce Website
+ File: dashboard.html
+ Description: This file defines the structure and layout of the User Dashboard Page.
+ Author: BytePulseX Solutions
+ Created: 31/12/2025
+ Last Updated: 02/01/2026
+-------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ===================== META TAGS ===================== -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <meta name="description"
+    content="Manage your Vendora account, view orders, wishlist, saved addresses, and security settings from your personal dashboard." />
+  <meta name="theme-color" content="#28a745" />
+
+  <!-- ===================== PAGE TITLE ===================== -->
+  <title>My Account – Dashboard | Vendora</title>
+
+  <!-- ===================== FAVICON & APP ICONS ===================== -->
+  <link rel="shortcut icon" href="assets/img/icons/favicon.ico" />
+  <link rel="icon" type="image/png" href="assets/img/icons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/icons/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Vendora" />
+  <link rel="manifest" href="assets/img/icons/site.webmanifest" />
+
+  <!-- ===================== SOCIAL SHARING META (OPEN GRAPH & TWITTER) ===================== -->
+  <meta property="og:title" content="My Account – Dashboard | Vendora" />
+  <meta property="og:description"
+    content="Manage your Vendora account, view orders, wishlist, saved addresses, and security settings from your personal dashboard." />
+  <meta property="og:image" content="assets/img/og-preview/og-image.jpg" />
+  <meta property="og:url" content="https://vendora-market.netlify.app/dashboard />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- ===================== PERFORMANCE OPTIMIZATION ===================== -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+  <!-- ===================== BOOTSTRAP CSS ===================== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- ===================== ICONS ===================== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- ===================== CUSTOM STYLES ===================== -->
+  <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="assets/css/pages-styles.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="assets/css/pages-responsive-styles.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="assets/css/animations.css" type="text/css" media="all" />
+
+</head>
+
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="header fixed-top">
+    <!-- ================= TOP BAR================= -->
+    <div class="top-bar bg-primary-green text-white py-2 small">
+      <div class="container d-flex justify-content-between align-items-center gap-5 ps-lg-2 pe-lg-2 ps-2 pe-0">
+
+        <!-- Left: Offers / Delivery -->
+        <div class="align-items-center gap-3">
+          <span class="me-3">
+            <i class="fa-solid fa-truck-fast me-1"></i>
+            Fast Shipping
+          </span>
+          <br class="d-block d-sm-none">
+          <span>
+            <i class="fa-solid fa-rotate me-1 mt-3"></i>
+            7-Day Returns
+          </span>
+        </div>
+
+        <!-- Right: Utility Links -->
+        <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap">
+          <a href="order-tracking.html" class="text-white text-decoration-none">
+            <i class="fa-solid fa-location-dot me-1"></i> Track Order
+          </a>
+          <a href="contact.html" class="text-white text-decoration-none">
+            <i class="fa-solid fa-headset me-1"></i> Help
+          </a>
+          <a href="login.html" class="text-white text-decoration-none fw-semibold">
+            <i class="fa-solid fa-user me-1"></i> Sign In
+          </a>
+        </div>
+
+      </div>
+    </div>
+    <!-- ================= MAIN NAVBAR ================= -->
+    <nav class="navbar navbar-expand-lg bg-secondary-green navbar-dark">
+      <div class="container d-flex align-items-center justify-content-between">
+
+        <!-- Left: Hamburger + Logo -->
+        <div class="d-flex align-items-center">
+          <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand logo" href="home.html">
+            <img src="assets/img/logo/logo.png" height="45" alt="Vendora">
+          </a>
+        </div>
+
+        <!-- Desktop Search -->
+        <form class="d-none d-lg-flex mx-lg-4 flex-grow-1">
+          <div class="input-group">
+            <input class="form-control" type="search" placeholder="Search for products, brands and more">
+            <button class="btn btn-accent" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </form>
+
+        <!-- Right Icons -->
+        <div class="d-flex align-items-center">
+
+          <!-- Desktop Links -->
+          <ul class="navbar-nav ms-auto align-items-center d-none d-lg-flex">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">
+                <i class="fa-solid fa-house me-1"></i> Home
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">
+                <i class="fa-solid fa-store me-1"></i> Shop
+              </a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                <i class="fa-solid fa-layer-group me-1"></i> Categories
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a class="dropdown-item" href="electronics.html">
+                    <i class="fa-solid fa-plug me-1"></i> Electronics
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">
+                <i class="fa-solid fa-circle-info me-1"></i> About
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">
+                <i class="fa-solid fa-envelope me-1"></i> Contact
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">
+                <i class="fa-solid fa-user-circle me-1"></i> My Account
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="wishlist.html">
+                <i class="fa-regular fa-heart me-1"></i> Wishlist
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="cart.html">
+                <i class="fa-solid fa-cart-shopping me-1"></i> Cart
+                <span class="badge bg-danger rounded-pill position-absolute top-0 start-100 translate-middle">2</span>
+              </a>
+            </li>
+          </ul>
+
+          <!-- Mobile Icons -->
+          <div class="d-flex d-lg-none gap-3">
+            <a href="dashboard.html" class="text-white"><i class="fa-regular fa-user fs-5"></i></a>
+            <a href="wishlist.html" class="text-white"><i class="fa-regular fa-heart fs-5"></i></a>
+            <a href="cart.html" class="text-white position-relative">
+              <i class="fa-solid fa-cart-shopping fs-5"></i>
+              <span class="badge bg-danger rounded-pill position-absolute top-0 start-100 translate-middle">2</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= SIDEBAR / OFFCANVAS================= -->
+  <sidebar class="offcanvas offcanvas-start bg-secondary-green text-white" tabindex="-1" id="mobileSidebar">
+    <div class="offcanvas-header border-bottom">
+      <a class="navbar-brand logo" href="home.html">
+        <img src="assets/img/logo/logo.png" height="45" alt="Vendora">
+      </a>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+
+    <div class="offcanvas-body">
+
+      <!-- Search -->
+      <form class="mb-4">
+        <div class="input-group">
+          <input class="form-control" type="search" placeholder="Search products">
+          <button class="btn btn-accent"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+      </form>
+
+      <!-- Navigation Links -->
+      <ul class="navbar-nav gap-2">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="home.html">
+            <i class="fa-solid fa-house me-2"></i> Home
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-white" href="shop.html">
+            <i class="fa-solid fa-store me-2"></i> Shop
+          </a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+            <i class="fa-solid fa-layer-group me-2"></i> Categories
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li>
+              <a class="dropdown-item" href="electronics.html">
+                <i class="fa-solid fa-plug me-2"></i> Electronics
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-white" href="about.html">
+            <i class="fa-solid fa-circle-info me-2"></i> About
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-white" href="contact.html">
+            <i class="fa-solid fa-envelope me-2"></i> Contact
+          </a>
+        </li>
+      </ul>
+
+      <div class="mt-4">
+        <a href="shop.html" class="btn btn-accent w-100">Start Shopping</a>
+      </div>
+
+    </div>
+  </sidebar>
+
+  <!-- ===================== DASHBOARD HERO ===================== -->
+  <section class="hero py-5 bg-primary-green text-white mb-0">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <small class="text-accent-green fw-semibold">User Dashboard</small>
+          <h1 class="mt-2">Welcome Back</h1>
+          <p class="mt-2 text-light">
+            Access your account overview, recent orders, wishlist, and settings from one place.
+          </p>
+        </div>
+        <nav class="d-flex justify-content-center mt-3" aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+              <a href="home.html" class="text-light text-decoration-none">Home</a>
+            </li>
+            <li class="breadcrumb-item active text-accent-green">
+              Dashboard
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DASHBOARD TABS / SECTIONS NAVIGATOR ===================== -->
+  <section class="dashboard-tabs bg-primary-green mt-0 mb-5">
+    <div class="container py-4">
+      <div class="nav nav-pills justify-content-center gap-2" role="tablist">
+
+        <button class="nav-link active btn-accent text-white" data-bs-toggle="pill" data-bs-target="#tab-dashboard">
+          <i class="fa-solid fa-gauge me-2"></i> Dashboard
+        </button>
+
+        <button class="nav-link btn-accent text-white" data-bs-toggle="pill" data-bs-target="#tab-orders">
+          <i class="fa-solid fa-box me-2"></i>Orders
+        </button>
+        <button class="nav-link btn-accent text-white" data-bs-toggle="pill" data-bs-target="#tab-orders-status">
+          <i class="fa-solid fa-battery-full me-2"></i>Orders Status
+        </button>
+        <button class="nav-link btn-accent text-white" data-bs-toggle="pill" data-bs-target="#tab-account-info">
+          <i class="fa-solid fa-circle-info me-2"></i>Account Info
+        </button>
+        <button class="nav-link btn-accent text-white" data-bs-toggle="pill" data-bs-target="#tab-wishlist">
+          <i class="fa-solid fa-heart me-2"></i> Wishlist
+        </button>
+
+        <button class="nav-link btn-accent text-white" data-bs-toggle="pill" data-bs-target="#tab-addresses">
+          <i class="fa-solid fa-location-dot me-2"></i> Addresses
+        </button>
+
+        <button class="nav-link btn-accent text-white" data-bs-toggle="pill" data-bs-target="#tab-payments">
+          <i class="fa-solid fa-credit-card me-2"></i> Payments
+        </button>
+
+        <button class="nav-link btn-accent text-white" data-bs-toggle="pill" data-bs-target="#tab-notifications">
+          <i class="fa-solid fa-bell me-2"></i> Notifications
+        </button>
+
+        <button class="nav-link btn-accent text-white" data-bs-toggle="pill" data-bs-target="#tab-support">
+          <i class="fa-solid fa-headset me-2"></i> Support
+        </button>
+
+        <button class="nav-link btn-accent text-white" data-bs-toggle="pill" data-bs-target="#tab-security">
+          <i class="fa-solid fa-lock me-2"></i> Security
+        </button>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="tab-content">
+
+    <!-- ===================== DASHBOARD OVERVIEW ===================== -->
+    <section class="tab-pane fade show active py-5" id="tab-dashboard">
+      <div class="container mb-5">
+        <!-- ===== SECTION HEADER ROW ===== -->
+        <div class="row mb-3">
+          <div class="col-md-12">
+            <small class="d-block text-center text-accent-green text-uppercase fw-semibold mb-1">
+              Account Snapshot
+            </small>
+            <h2 class="fw-bold text-center mb-2">Dashboard Overview</h2>
+            <p class="text-muted text-center">
+              Get a quick summary of your account activity, recent orders, and key notifications at a glance.
+            </p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="card p-4 text-center card-shadow h-100">
+              <small class="text-muted">Total Orders</small>
+              <h3 class="fw-bold mt-1">12</h3>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card p-4 text-center card-shadow h-100">
+              <small class="text-muted">Pending</small>
+              <h3 class="fw-bold mt-1">3</h3>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card p-4 text-center card-shadow h-100">
+              <small class="text-muted">Wallet</small>
+              <h3 class="fw-bold mt-1">$250</h3>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card p-4 text-center card-shadow h-100">
+              <small class="text-muted">Reward Points</small>
+              <h3 class="fw-bold mt-1">1200</h3>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== RECENT ORDERS ===================== -->
+    <section class="tab-pane fade py-5" id="tab-orders">
+      <div class="container mb-3">
+        <!-- ===== SECTION HEADER ROW ===== -->
+        <div class="row mb-3">
+          <div class="col-md-12">
+            <small class="d-block text-center text-accent-green text-uppercase fw-semibold mb-1">
+              Purchase History
+            </small>
+            <h2 class="fw-bold text-center mb-2">Recent Orders</h2>
+            <p class="text-muted text-center">
+              View your most recent purchases and their current status.
+            </p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-12">
+            <div class="card card-shadow">
+              <div class="table-responsive">
+                <table class="table align-middle mb-0">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Order</th>
+                      <th>Date</th>
+                      <th>Status</th>
+                      <th>Total</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>#1021</td>
+                      <td>25 Dec 2025</td>
+                      <td><span class="badge bg-warning text-dark">Processing</span></td>
+                      <td>$99</td>
+                      <td><a href="order-tracking.html" class="btn btn-sm btn-accent">View</a></td>
+                    </tr>
+                    <tr>
+                      <td>#1020</td>
+                      <td>20 Dec 2025</td>
+                      <td><span class="badge bg-success">Delivered</span></td>
+                      <td>$249</td>
+                      <td><a href="order-tracking.html" class="btn btn-sm btn-accent">View</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ORDER STATUS TRACKING ===================== -->
+    <section class="tab-pane fade py-5" id="tab-orders-status">
+      <div class="container mb-5">
+        <!-- ===== SECTION HEADER ROW ===== -->
+        <div class="row mb-3">
+          <div class="col-md-12">
+            <small class="d-block text-center text-accent-green text-uppercase fw-semibold mb-1">
+              Live Progress
+            </small>
+            <h2 class="fw-bold text-center mb-2">Order Status</h2>
+            <p class="text-muted text-center">
+              Track your orders and view real-time delivery updates.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card p-4 card-shadow">
+              <div class="progress" style="height:28px">
+                <div class="progress-bar bg-accent-green w-75 fw-semibold">
+                  Shipped
+                </div>
+              </div>
+              <small class="text-muted mt-2 d-block">Order #1021</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ACCOUNT INFO ===================== -->
+    <section class="tab-pane tab-account-info fade py-5" id="tab-account-info">
+      <div class="container mb-5">
+        <!-- ===== SECTION HEADER ROW ===== -->
+        <div class="row mb-3">
+          <div class="col-md-12">
+            <small class="d-block text-center text-accent-green text-uppercase fw-semibold mb-1">
+              Profile Details
+            </small>
+            <h2 class="fw-bold text-center mb-2">Account Information</h2>
+            <p class="text-muted text-center">
+              View and update your personal details and contact information.
+            </p>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-12">
+            <div class="card p-3 card-shadow d-flex flex-column flex-md-row align-items-center gap-4">
+              <!-- Image + Text -->
+              <div class="d-flex flex-column flex-md-row align-items-center gap-3 flex-grow-1">
+                <div>
+                  <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d"
+                    class="rounded-circle profile-img" alt="Profile Image">
+                </div>
+                <div class="text-center text-md-start">
+                  <h5 class="mb-1">John Doe</h5>
+                  <p class="mb-1 text-muted">
+                    john@example.com
+                  </p>
+                  <p class="mb-2 text-muted">
+                    +1 234 567 890
+                  </p>
+                </div>
+              </div>
+
+              <!-- Button -->
+              <div class="mt-2 mt-md-0 ms-md-auto">
+                <a class="btn btn-sm btn-outline-green">Edit Profile</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SAVED ADDRESSES ===================== -->
+    <section class="tab-pane fade py-5" id="tab-addresses">
+      <div class="container mb-5">
+        <!-- ===== SECTION HEADER ROW ===== -->
+        <div class="row mb-3">
+          <div class="col-md-12">
+            <small class="d-block text-center text-accent-green text-uppercase fw-semibold mb-1">
+              Delivery Locations
+            </small>
+            <h2 class="fw-bold text-center mb-2">Saved Addresses</h2>
+            <p class="text-muted text-center">
+              Save multiple addresses for faster and smoother checkouts.
+            </p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card p-4 card-shadow h-100">
+              <h6>Home</h6>
+              <p class="text-muted mb-3">
+                123 Main St, New York
+              </p>
+              <a class="btn btn-sm btn-outline-green">Edit</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card p-4 card-shadow h-100">
+              <h6>Work</h6>
+              <p class="text-muted mb-3">
+                456 Corporate Blvd
+              </p>
+              <a class="btn btn-sm btn-outline-green">Edit</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== WISHLIST / SAVED ITEMS ===================== -->
+    <section class="tab-pane fade py-5" id="tab-wishlist">
+      <div class="container mb-5">
+        <!-- ===== SECTION HEADER ROW ===== -->
+        <div class="row mb-3">
+          <div class="col-md-12">
+            <small class="d-block text-center text-accent-green text-uppercase fw-semibold mb-1">
+              Saved For Later
+            </small>
+            <h2 class="fw-bold text-center mb-2">Wishlist</h2>
+            <p class="text-muted text-center">
+              Save your favorite items and access them anytime.
+            </p>
+          </div>
+        </div>
+        <div class="row g-4">
+
+          <!-- Wishlist Item -->
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30"
+                class="card-img-top object-fit-cover" style="height:220px;" alt="">
+              <div class="card-body">
+                <h6 class="mb-1">Smart Watch</h6>
+                <p class="mb-1">
+                  $99.00
+                </p>
+                <small class="text-warning">★★★★☆</small>
+                <p class="small text-success mt-1">
+                  In Stock
+                </p>
+              </div>
+              <div class="card-footer bg-transparent border-0 d-grid gap-2">
+                <button class="btn btn-accent btn-sm">Add to Cart</button>
+                <button class="btn btn-outline-green btn-sm">Remove</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wishlist Item -->
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
+                class="card-img-top object-fit-cover" style="height:220px;" alt="">
+              <div class="card-body">
+                <h6 class="mb-1">Studio Headphones</h6>
+                <p class="mb-1">
+                  $149.00
+                </p>
+                <small class="text-warning">★★★★★</small>
+                <p class="small text-danger mt-1">
+                  Only 2 left
+                </p>
+              </div>
+              <div class="card-footer bg-transparent border-0 d-grid gap-2">
+                <button class="btn btn-accent btn-sm">Add to Cart</button>
+                <button class="btn btn-outline-green btn-sm">Remove</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wishlist Item -->
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"
+                class="card-img-top object-fit-cover" style="height:220px;" alt="">
+              <div class="card-body">
+                <h6 class="mb-1">Smartphone</h6>
+                <p class="mb-1">
+                  $699.00
+                </p>
+                <small class="text-warning">★★★★☆</small>
+                <p class="small text-muted mt-1">
+                  Out of Stock
+                </p>
+              </div>
+              <div class="card-footer bg-transparent border-0 d-grid gap-2">
+                <button class="btn btn-outline-green btn-sm">Notify Me</button>
+                <button class="btn btn-outline-green btn-sm">Remove</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== PAYMENT METHODS ===================== -->
+    <section class="tab-pane fade py-5" id="tab-payments">
+      <div class="container mb-5">
+        <!-- ===== SECTION HEADER ROW ===== -->
+        <div class="row mb-3">
+          <div class="col-md-12">
+            <small class="d-block text-center text-accent-green text-uppercase fw-semibold mb-1">
+              Billing Options
+            </small>
+            <h2 class="fw-bold text-center mb-2">Payment Methods</h2>
+            <p class="text-muted text-center">
+              Add, update, or remove payment methods for faster checkout.
+            </p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card p-4 card-shadow h-100">
+              <h6>Visa •••• 1234</h6>
+              <p class="text-muted mb-3">
+                Expires 12/25
+              </p>
+              <a class="btn btn-sm btn-outline-green">Manage</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card p-4 card-shadow h-100">
+              <h6>Mastercard •••• 5678</h6>
+              <p class="text-muted mb-3">
+                Expires 11/26
+              </p>
+              <a class="btn btn-sm btn-outline-green">Manage</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== NOTIFICATIONS / MESSAGES ===================== -->
+    <section class="tab-pane fade py-5" id="tab-notifications">
+      <div class="container mb-5">
+        <!-- ===== SECTION HEADER ROW ===== -->
+        <div class="row mb-3">
+          <div class="col-md-12">
+            <small class="d-block text-center text-accent-green text-uppercase fw-semibold mb-1">
+              Alerts Center
+            </small>
+            <h2 class="fw-bold text-center mb-2">Notifications</h2>
+            <p class="text-muted text-center">
+              Stay updated with alerts, updates, and important account activity.
+            </p>
+          </div>
+        </div>
+        <ul class="list-group card-shadow">
+          <li class="list-group-item d-flex justify-content-between">
+            Order shipped <span class="badge bg-success">New</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            Discount available <span class="badge bg-primary">Promo</span>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- ===================== SUPPORT & RETURNS ===================== -->
+    <section class="tab-pane fade py-5" id="tab-support">
+      <div class="container mb-5">
+        <!-- ===== SECTION HEADER ROW ===== -->
+        <div class="row mb-3">
+          <div class="col-md-12">
+            <small class="d-block text-center text-accent-green text-uppercase fw-semibold mb-1">
+              Help Center
+            </small>
+            <h2 class="fw-bold text-center mb-2">Support & Returns</h2>
+            <p class="text-muted text-center">
+              Reach out for assistance, track requests, and handle returns with ease.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="d-flex justify-content-center gap-3">
+            <a class="btn btn-accent"><i class="fa-solid fa-headset me-2"></i> Support</a>
+            <a class="btn btn-outline-green"><i class="fa-solid fa-rotate me-2"></i> Returns</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECURITY & SETTINGS ===================== -->
+    <section class="tab-pane fade py-5" id="tab-security">
+      <div class="container mb-5">
+        <!-- ===== SECTION HEADER ROW ===== -->
+        <div class="row mb-3">
+          <div class="col-md-12">
+            <small class="d-block text-center text-accent-green text-uppercase fw-semibold mb-1">
+              Account Protection
+            </small>
+            <h2 class="fw-bold text-center mb-2">Security & Settings</h2>
+            <p class="text-muted text-center">
+              Update your account settings, manage security options, and keep your information protected.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="d-flex justify-content-center gap-3">
+            <a class="btn btn-outline-green"><i class="fa-solid fa-key me-2 text-accent-green"></i> Change Password</a>
+            <a class="btn btn-outline-danger"><i class="fa-solid fa-right-from-bracket me-2"></i> Logout</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer py-5 pb-0 bg-primary-green text-white">
+    <div class="container">
+      <div class="row gy-4">
+
+        <!-- Logo & About -->
+        <div class="col-md-3">
+          <a class="navbar-brand" href="home.html">
+            <img src="assets/img/logo/logo.png" height="45" alt="Vendora">
+          </a>
+          <p class="mt-2">
+            Fast shipping, secure payments, and reliable support with <strong>Vendora</strong>.
+          </p>
+        </div>
+
+        <!-- Shop & Account -->
+        <div class="col-md-3">
+          <h5 class="mb-3">Shop & Account</h5>
+          <ul class="list-unstyled">
+            <li><a href="shop.html" class="text-white text-decoration-none">Shop</a></li>
+            <li><a href="wishlist.html" class="text-white text-decoration-none">Wishlist</a></li>
+            <li><a href="cart.html" class="text-white text-decoration-none">Cart</a></li>
+            <li><a href="checkout.html" class="text-white text-decoration-none">Checkout</a></li>
+            <li><a href="dashboard.html" class="text-white text-decoration-none">My Account</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Service -->
+        <div class="col-md-3">
+          <h5 class="mb-3">Customer Service</h5>
+          <ul class="list-unstyled">
+            <li><a href="order-tracking.html" class="text-white text-decoration-none">Track Order</a></li>
+            <li><a href="refund-return-policy.html" class="text-white text-decoration-none">Refund & Returns</a></li>
+            <li><a href="faqs.html" class="text-white text-decoration-none">FAQs</a></li>
+            <li><a href="contact.html" class="text-white text-decoration-none">Help & Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Company & Legal -->
+        <div class="col-md-3">
+          <h5 class="mb-3">Company & Legal</h5>
+          <ul class="list-unstyled">
+            <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+            <li><a href="privacy-policy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
+            <li><a href="terms-conditions.html" class="text-white text-decoration-none">Terms & Conditions</a></li>
+            <li><a href="login.html" class="text-white text-decoration-none">Login</a></li>
+            <li><a href="register.html" class="text-white text-decoration-none">Register</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="bg-secondary-green border-top mt-4 text-center px-3 py-2">
+      <p class="text-white mb-0">
+        © <span id="year"></span> Vendora. Powered by BytePulseX Solutions.
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- ================= BOOTSTRAP JS ================= -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ================= CUSTOM JS FILE ================= -->
+  <script src="assets/js/script.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+
+</html>

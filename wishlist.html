@@ -1,0 +1,685 @@
+<!-------------------------------------------------------------------------
+ Project: Vendora - E-commerce Website
+ File: wishlist.html
+ Description: This file defines the structure and layout of the Wishlist Page.
+ Author: BytePulseX Solutions
+ Created: 01/01/2026
+ Last Updated: 02/01/2026
+-------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ===================== META TAGS ===================== -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <meta name="description"
+    content="View and manage your favorite products on Vendora. Easily add items to your cart, track availability, and shop your wishlist anytime." />
+  <meta name="theme-color" content="#28a745" />
+
+  <!-- ===================== PAGE TITLE ===================== -->
+  <title>My Wishlist – Favorite Products | Vendora</title>
+
+  <!-- ===================== FAVICON & APP ICONS ===================== -->
+  <link rel="shortcut icon" href="assets/img/icons/favicon.ico" />
+  <link rel="icon" type="image/png" href="assets/img/icons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/icons/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Vendora" />
+  <link rel="manifest" href="assets/img/icons/site.webmanifest" />
+
+  <!-- ===================== SOCIAL SHARING META (OPEN GRAPH & TWITTER) ===================== -->
+  <meta property="og:title" content="My Wishlist – Favorite Products | Vendora" />
+  <meta property="og:description"
+    content="View and manage your favorite products on Vendora. Easily add items to your cart, track availability, and shop your wishlist anytime." />
+  <meta property="og:image" content="assets/img/og-preview/og-image.jpg" />
+  <meta property="og:url" content="https://vendora-market.netlify.app/wishlist" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- ===================== PERFORMANCE OPTIMIZATION ===================== -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+  <!-- ===================== BOOTSTRAP CSS ===================== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- ===================== ICONS ===================== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- ===================== CUSTOM STYLES ===================== -->
+  <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="assets/css/pages-styles.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="assets/css/pages-responsive-styles.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="assets/css/animations.css" type="text/css" media="all" />
+</head>
+
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="header fixed-top">
+    <!-- ================= TOP BAR================= -->
+    <div class="top-bar bg-primary-green text-white py-2 small">
+      <div class="container d-flex justify-content-between align-items-center gap-5 ps-lg-2 pe-lg-2 ps-2 pe-0">
+
+        <!-- Left: Offers / Delivery -->
+        <div class="align-items-center gap-3">
+          <span class="me-3">
+            <i class="fa-solid fa-truck-fast me-1"></i>
+            Fast Shipping
+          </span>
+          <br class="d-block d-sm-none">
+          <span>
+            <i class="fa-solid fa-rotate me-1 mt-3"></i>
+            7-Day Returns
+          </span>
+        </div>
+
+        <!-- Right: Utility Links -->
+        <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap">
+          <a href="order-tracking.html" class="text-white text-decoration-none">
+            <i class="fa-solid fa-location-dot me-1"></i> Track Order
+          </a>
+          <a href="contact.html" class="text-white text-decoration-none">
+            <i class="fa-solid fa-headset me-1"></i> Help
+          </a>
+          <a href="login.html" class="text-white text-decoration-none fw-semibold">
+            <i class="fa-solid fa-user me-1"></i> Sign In
+          </a>
+        </div>
+
+      </div>
+    </div>
+    <!-- ================= MAIN NAVBAR ================= -->
+    <nav class="navbar navbar-expand-lg bg-secondary-green navbar-dark">
+      <div class="container d-flex align-items-center justify-content-between">
+
+        <!-- Left: Hamburger + Logo -->
+        <div class="d-flex align-items-center">
+          <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand logo" href="home.html">
+            <img src="assets/img/logo/logo.png" height="45" alt="Vendora">
+          </a>
+        </div>
+
+        <!-- Desktop Search -->
+        <form class="d-none d-lg-flex mx-lg-4 flex-grow-1">
+          <div class="input-group">
+            <input class="form-control" type="search" placeholder="Search for products, brands and more">
+            <button class="btn btn-accent" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </form>
+
+        <!-- Right Icons -->
+        <div class="d-flex align-items-center">
+
+          <!-- Desktop Links -->
+          <ul class="navbar-nav ms-auto align-items-center d-none d-lg-flex">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">
+                <i class="fa-solid fa-house me-1"></i> Home
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">
+                <i class="fa-solid fa-store me-1"></i> Shop
+              </a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                <i class="fa-solid fa-layer-group me-1"></i> Categories
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a class="dropdown-item" href="electronics.html">
+                    <i class="fa-solid fa-plug me-1"></i> Electronics
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">
+                <i class="fa-solid fa-circle-info me-1"></i> About
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">
+                <i class="fa-solid fa-envelope me-1"></i> Contact
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">
+                <i class="fa-solid fa-user-circle me-1"></i> My Account
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="wishlist.html">
+                <i class="fa-regular fa-heart me-1"></i> Wishlist
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="cart.html">
+                <i class="fa-solid fa-cart-shopping me-1"></i> Cart
+                <span class="badge bg-danger rounded-pill position-absolute top-0 start-100 translate-middle">2</span>
+              </a>
+            </li>
+          </ul>
+
+          <!-- Mobile Icons -->
+          <div class="d-flex d-lg-none gap-3">
+            <a href="dashboard.html" class="text-white"><i class="fa-regular fa-user fs-5"></i></a>
+            <a href="wishlist.html" class="text-white"><i class="fa-regular fa-heart fs-5"></i></a>
+            <a href="cart.html" class="text-white position-relative">
+              <i class="fa-solid fa-cart-shopping fs-5"></i>
+              <span class="badge bg-danger rounded-pill position-absolute top-0 start-100 translate-middle">2</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= SIDEBAR / OFFCANVAS================= -->
+  <sidebar class="offcanvas offcanvas-start bg-secondary-green text-white" tabindex="-1" id="mobileSidebar">
+    <div class="offcanvas-header border-bottom">
+      <a class="navbar-brand logo" href="home.html">
+        <img src="assets/img/logo/logo.png" height="45" alt="Vendora">
+      </a>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+
+    <div class="offcanvas-body">
+
+      <!-- Search -->
+      <form class="mb-4">
+        <div class="input-group">
+          <input class="form-control" type="search" placeholder="Search products">
+          <button class="btn btn-accent"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+      </form>
+
+      <!-- Navigation Links -->
+      <ul class="navbar-nav gap-2">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="home.html">
+            <i class="fa-solid fa-house me-2"></i> Home
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-white" href="shop.html">
+            <i class="fa-solid fa-store me-2"></i> Shop
+          </a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+            <i class="fa-solid fa-layer-group me-2"></i> Categories
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li>
+              <a class="dropdown-item" href="electronics.html">
+                <i class="fa-solid fa-plug me-2"></i> Electronics
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-white" href="about.html">
+            <i class="fa-solid fa-circle-info me-2"></i> About
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-white" href="contact.html">
+            <i class="fa-solid fa-envelope me-2"></i> Contact
+          </a>
+        </li>
+      </ul>
+
+      <div class="mt-4">
+        <a href="shop.html" class="btn btn-accent w-100">Start Shopping</a>
+      </div>
+
+    </div>
+  </sidebar>
+
+  <!-- ===================== WISHLIST HERO ===================== -->
+  <section class="hero py-5 bg-primary-green text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <small class="text-accent-green fw-semibold">Track Your Favorites</small>
+          <h1 class="mt-2">Wishlist</h1>
+          <p class="mt-2 text-light">
+            Keep track of the products you love and plan to purchase later.
+          </p>
+        </div>
+        <nav class="d-flex justify-content-center mt-3" aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+              <a href="home.html" class="text-light text-decoration-none">Home</a>
+            </li>
+            <li class="breadcrumb-item active text-accent-green">
+              Wishlist
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WISHLIST SUMMARY ===================== -->
+  <section class="wishlist-summary py-5 border-bottom">
+    <div class="container">
+      <!-- ===== SECTION HEADER ROW ===== -->
+      <div class="row mb-3 text-center">
+        <div class="col-md-12">
+          <small class="d-block text-accent-green text-uppercase fw-semibold mb-1">
+            Wishlist at a Glance
+          </small>
+          <h2 class="fw-bold mb-2">Wishlist Summary</h2>
+          <p class="text-muted">
+            Manage your favorite items easily from one place
+          </p>
+        </div>
+      </div>
+
+      <!-- Summary Content -->
+      <div class="row align-items-center justify-content-between">
+
+        <!-- Wishlist Count -->
+        <div class="wishlist-count col-md-6 col-sm-12 mb-3 mb-md-0 d-flex align-items-center gap-2">
+          <span class="rounded-circle d-flex align-items-center justify-content-center">
+            <i class="fa-solid fa-heart"></i>
+          </span>
+          <p class="fs-5 mb-0">
+            <strong>5 items</strong> in your wishlist
+          </p>
+        </div>
+
+        <!-- Actions -->
+        <div class="col-md-6 col-sm-12 text-md-end text-sm-start">
+          <div class="d-flex gap-2 justify-content-md-end justify-content-sm-start">
+            <a href="cart.html" class="btn btn-accent px-4 py-2 fw-semibold">
+              Move All to Cart
+            </a>
+            <button class="btn btn-outline-green px-4 py-2 fw-semibold">
+              Clear Wishlist
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== WISHLIST ITEMS GRID ===================== -->
+  <section class="wishlist-items py-5">
+    <div class="container">
+      <!-- ===== SECTION HEADER ROW ===== -->
+      <div class="row mb-3">
+        <div class="col-md-12">
+          <small class="d-block text-center text-accent-green text-uppercase fw-semibold mb-1">
+            Your Favorites
+          </small>
+          <h2 class="fw-bold text-center mb-2">Wishlist Items</h2>
+          <p class="text-center text-muted">
+            Keep track of your desired products and manage them easily.
+          </p>
+        </div>
+      </div>
+      <div class="row g-4">
+
+        <!-- Wishlist Item -->
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <a href="product-detail.html" class="text-decoration-none text-dark">
+              <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30"
+                class="card-img-top object-fit-cover" style="height:220px;" alt="">
+              <div class="card-body">
+                <h6 class="mb-1">Smart Watch</h6>
+                <p class="mb-1">
+                  $99.00
+                </p>
+                <small class="text-warning">★★★★☆</small>
+                <p class="small text-success mt-1">
+                  In Stock
+                </p>
+              </div>
+              <div class="card-footer bg-transparent border-0 d-grid gap-2">
+                <a href="cart.html" class="btn btn-accent btn-sm">Add to Cart</a>
+                <button class="btn btn-outline-green btn-sm">Remove</button>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Wishlist Item -->
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <a href="product-detail.html" class="text-decoration-none text-dark">
+              <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
+                class="card-img-top object-fit-cover" style="height:220px;" alt="">
+              <div class="card-body">
+                <h6 class="mb-1">Studio Headphones</h6>
+                <p class="mb-1">
+                  $149.00
+                </p>
+                <small class="text-warning">★★★★★</small>
+                <p class="small text-danger mt-1">
+                  Only 2 left
+                </p>
+              </div>
+              <div class="card-footer bg-transparent border-0 d-grid gap-2">
+                <a href="cart.html" class="btn btn-accent btn-sm">Add to Cart</a>
+                <button class="btn btn-outline-green btn-sm">Remove</button>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Wishlist Item -->
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <a href="product-detail.html" class="text-decoration-none text-dark">
+              <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"
+                class="card-img-top object-fit-cover" style="height:220px;" alt="">
+              <div class="card-body">
+                <h6 class="mb-1">Smartphone</h6>
+                <p class="mb-1">
+                  $699.00
+                </p>
+                <small class="text-warning">★★★★☆</small>
+                <p class="small text-muted mt-1">
+                  Out of Stock
+                </p>
+              </div>
+              <div class="card-footer bg-transparent border-0 d-grid gap-2">
+                <button class="btn btn-outline-green btn-sm">Notify Me</button>
+                <button class="btn btn-outline-green btn-sm">Remove</button>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== AVAILABILITY & PRICE ALERTS ===================== -->
+  <section class="availability-price-alerts py-5 bg-light">
+    <div class="container">
+      <!-- ===== SECTION HEADER ROW ===== -->
+      <div class="row mb-3 px-lg-0 px-4">
+        <div class="col-md-12">
+          <small class="d-block text-center text-accent-green text-uppercase fw-semibold mb-1">
+            Stay Updated
+          </small>
+          <h2 class="fw-bold text-center mb-2">Price Drop & Stock Alerts</h2>
+          <p class="text-center text-muted">
+            Get notified when your favorite items go on sale or are back in stock.
+          </p>
+        </div>
+      </div>
+
+      <!-- Alerts Grid -->
+      <div class="row justify-content-center g-4">
+
+        <!-- Alert 1 -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card p-3 card-shadow h-100 text-center">
+            <i class="fa-solid fa-tag text-accent-green fs-2 mb-2"></i>
+            <h6 class="fw-semibold mb-1">Price Drop Alert</h6>
+            <p class="text-muted small mb-3">
+              Be the first to know when a product's price decreases.
+            </p>
+            <a href="alerts.html" class="btn btn-sm btn-accent px-3 mt-auto">Set Alert</a>
+          </div>
+        </div>
+
+        <!-- Alert 2 -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card p-3 card-shadow h-100 text-center">
+            <i class="fa-solid fa-box-open text-accent-green fs-2 mb-2"></i>
+            <h6 class="fw-semibold mb-1">Back In Stock</h6>
+            <p class="text-muted small mb-3">
+              Get notified immediately when an out-of-stock item is available.
+            </p>
+            <a href="alerts.html" class="btn btn-sm btn-accent px-3 mt-auto">Set Alert</a>
+          </div>
+        </div>
+
+        <!-- Alert 3 -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card p-3 card-shadow h-100 text-center">
+            <i class="fa-solid fa-heart text-accent-green fs-2 mb-2"></i>
+            <h6 class="fw-semibold mb-1">Wishlist Updates</h6>
+            <p class="text-muted small mb-3">
+              Receive notifications for changes to your wishlist items, like discounts or availability.
+            </p>
+            <a href="alerts.html" class="btn btn-sm btn-accent px-3 mt-auto">Set Alert</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= YOU MAY ALSO LIKE ================= -->
+  <section class="you-may-also-like py-5">
+    <div class="container">
+      <!-- ===== SECTION HEADER ROW ===== -->
+      <div class="row mb-3">
+        <div class="col-md-12">
+          <small class="d-block text-center text-accent-green text-uppercase fw-semibold mb-1">
+            Recommended
+          </small>
+
+          <h2 class="fw-bold text-center mb-2">Similar Products</h2>
+
+          <p class="text-center text-muted">
+            Discover more products that match your interests and complement your favorites.
+          </p>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h5 class="mb-0">You May Also Like</h5>
+        <a href="electronics.html" class="text-decoration-none small btn btn-accent">View all</a>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-3 col-sm-6">
+          <div class="card h-100 border-0 shadow-sm product-suggestion">
+            <a class="text-decoration-none text-dark" href="product-detail.html">
+              <img
+                src="https://images.unsplash.com/photo-1606741965429-8d76ff50bb2f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="card-img-top rounded" alt="Product">
+              <div class="card-body p-2">
+                <h6 class="card-title mb-1">Apple Earpods</h6>
+                <p class="mb-1 fw-semibold">
+                  $79.00
+                </p>
+                <small class="text-warning">★★★★☆</small>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="card h-100 border-0 shadow-sm product-suggestion">
+            <a class="text-decoration-none text-dark" href="product-detail.html">
+              <img
+                src="https://images.unsplash.com/photo-1677019758448-4c34a78df2c3?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="card-img-top rounded" alt="Product">
+              <div class="card-body p-2">
+                <h6 class="card-title mb-1">Studio Headphones</h6>
+                <p class="mb-1 fw-semibold">
+                  $149.00
+                </p>
+                <small class="text-warning">★★★★★</small>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="card h-100 border-0 shadow-sm product-suggestion">
+            <a class="text-decoration-none text-dark" href="product-detail.html">
+              <img
+                src="https://images.unsplash.com/photo-1615199669541-7c1b0f8a06d1?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="card-img-top rounded" alt="Product">
+              <div class="card-body p-2">
+                <h6 class="card-title mb-1">Bluetooth Speaker</h6>
+                <p class="mb-1 fw-semibold">
+                  $89.00
+                </p>
+                <small class="text-warning">★★★★☆</small>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="card h-100 border-0 shadow-sm product-suggestion">
+            <a class="text-decoration-none text-dark" href="product-detail.html">
+              <img
+                src="https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?q=80&w=888&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="card-img-top rounded" alt="Product">
+              <div class="card-body p-2">
+                <h6 class="card-title mb-1">Fitness Tracker</h6>
+                <p class="mb-1 fw-semibold">
+                  $69.00
+                </p>
+                <small class="text-warning">★★★★☆</small>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== CROSS-SELL CTA ===================== -->
+  <section class="cross-sell-cta py-5 bg-secondary-green text-white text-center">
+    <div class="container">
+      <!-- ===== SECTION HEADER ROW ===== -->
+      <div class="row mb-3">
+        <div class="col-md-12">
+          <small class="d-block text-accent-green text-uppercase fw-semibold mb-1">
+            Special Offer
+          </small>
+          <h2 class="fw-bold mb-2">Free Shipping on Orders Over $50</h2>
+          <p class="text-light">
+            Turn your wishlist into an order today
+          </p>
+
+          <!-- CTA Button -->
+          <a href="shop.html" class="btn btn-accent fw-semibold">Continue Shopping</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EMPTY STATE (CONDITIONAL) ===================== -->
+  <!-- Show this ONLY when wishlist is empty
+  <section class="empty-state py-5 text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+      <i class="fa-regular fa-heart fa-3x text-accent-green mb-3"></i>
+      <h5>Your wishlist is empty</h5>
+      <p class="text-muted">Start saving your favorite products</p>
+      <a href="shop.html" class="btn btn-accent">Browse Products</a>
+          </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer py-5 pb-0 bg-primary-green text-white">
+    <div class="container">
+      <div class="row gy-4">
+
+        <!-- Logo & About -->
+        <div class="col-md-3">
+          <a class="navbar-brand" href="home.html">
+            <img src="assets/img/logo/logo.png" height="45" alt="Vendora">
+          </a>
+          <p class="mt-2">
+            Fast shipping, secure payments, and reliable support with <strong>Vendora</strong>.
+          </p>
+        </div>
+
+        <!-- Shop & Account -->
+        <div class="col-md-3">
+          <h5 class="mb-3">Shop & Account</h5>
+          <ul class="list-unstyled">
+            <li><a href="shop.html" class="text-white text-decoration-none">Shop</a></li>
+            <li><a href="wishlist.html" class="text-white text-decoration-none">Wishlist</a></li>
+            <li><a href="cart.html" class="text-white text-decoration-none">Cart</a></li>
+            <li><a href="checkout.html" class="text-white text-decoration-none">Checkout</a></li>
+            <li><a href="dashboard.html" class="text-white text-decoration-none">My Account</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Service -->
+        <div class="col-md-3">
+          <h5 class="mb-3">Customer Service</h5>
+          <ul class="list-unstyled">
+            <li><a href="order-tracking.html" class="text-white text-decoration-none">Track Order</a></li>
+            <li><a href="refund-return-policy.html" class="text-white text-decoration-none">Refund & Returns</a></li>
+            <li><a href="faqs.html" class="text-white text-decoration-none">FAQs</a></li>
+            <li><a href="contact.html" class="text-white text-decoration-none">Help & Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Company & Legal -->
+        <div class="col-md-3">
+          <h5 class="mb-3">Company & Legal</h5>
+          <ul class="list-unstyled">
+            <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+            <li><a href="privacy-policy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
+            <li><a href="terms-conditions.html" class="text-white text-decoration-none">Terms & Conditions</a></li>
+            <li><a href="login.html" class="text-white text-decoration-none">Login</a></li>
+            <li><a href="register.html" class="text-white text-decoration-none">Register</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="bg-secondary-green border-top mt-4 text-center px-3 py-2">
+      <p class="text-white mb-0">
+        © <span id="year"></span> Vendora. Powered by BytePulseX Solutions.
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- ================= BOOTSTRAP JS ================= -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ================= CUSTOM JS FILE ================= -->
+  <script src="assets/js/script.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+/* -----------------------------------------------------------
+ * Project: Vendora - E-commerce Website
+ * File: pages-responsive-styles.css
+ * Description: This file contains responsive styling, layout rules, and visual formatting of the subpages.
+ * Author: BytePulseX Solutions
+ * Created: 17/01/2026
+ * Last Updated: 17/01/2026
+------------------------------------------------------------ */
+
+/* =========================================================
+   RESPONSIVE STYLES — MOBILE & SMALL SCREENS
+   Target: Devices up to 767px width
+   ========================================================= */
+@media (max-width: 767px) {
+
+  /* -------------------------
+       ABOUT PAGE
+       ------------------------- */
+
+  /*  Milestone & Timeline */
+  .timeline-wrapper {
+    padding-top: 0;
+    padding-left: 24px;
+  }
+
+  /* Vertical line */
+  .timeline-wrapper::before {
+    display: block;
+    position: absolute;
+    top: 10px;
+    bottom: 0;
+    left: 0px;
+    width: 2px;
+    height: 100%;
+    background: var(--green-accent);
+    content: "";
+  }
+
+  .timeline-item {
+    position: relative;
+    text-align: left;
+  }
+
+  /* Dot */
+  .timeline-dot {
+    top: 15px;
+    left: 10px;
+    transform: translateX(-50%);
+  }
+
+  /* Horizontal connector above dot */
+  .timeline-dot::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -200%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 2px;
+    background: var(--green-accent);
+  }
+
+  /* Card spacing */
+  .timeline-item .card {
+    margin-left: 24px;
+    margin-top: 0;
+  }
+}
