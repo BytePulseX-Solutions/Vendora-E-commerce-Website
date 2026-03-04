@@ -5,7 +5,7 @@
  * Author: BytePulseX Solutions
  * Created: 17/12/2025
 ------------------------------------------------------------ */
-
+    
 /* ====== ACTIVE NAVIGATION LINK HANDLER ====== */
 document.addEventListener("DOMContentLoaded", function () {
     const currentPage = window.location.pathname.split("/").pop();
